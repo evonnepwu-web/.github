@@ -1,5 +1,5 @@
 <?php
-// Trigger CI/CD Pipeline Build 2
+// Trigger CI/CD Pipeline Build 3
 /**
  * The base configuration for WordPress
  *
