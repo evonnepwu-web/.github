@@ -1,6 +1,6 @@
 # ===========================================
 # GitHub Actions - ECS Fargate CI/CD Pipeline
-# 
+#
 # 功能：
 # - Development: 自動部署，Email 通知
 # - Production: Staging → Approval → Production
@@ -13,21 +13,21 @@ on:
     branches:
       - main
     paths:
-      - 'src/**'
-      - 'infrastructure/terraform/**'
-      - '.github/workflows/deploy.yml'
+      - "src/**"
+      - "infrastructure/terraform/**"
+      - ".github/workflows/deploy.yml"
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Target environment'
+        description: "Target environment"
         required: true
-        default: 'development'
+        default: "development"
         type: choice
         options:
           - development
           - production
       force_deploy:
-        description: 'Force deployment even without changes'
+        description: "Force deployment even without changes"
         required: false
         default: false
         type: boolean
@@ -134,7 +134,7 @@ jobs:
           IMAGE_TAG: ${{ steps.meta.outputs.version }}
         run: |
           IMAGE_URI="${ECR_REGISTRY}/${ECR_REPOSITORY}:${IMAGE_TAG}"
-          
+
           docker build \
             --cache-from ${ECR_REGISTRY}/${ECR_REPOSITORY}:latest \
             --build-arg BUILDKIT_INLINE_CACHE=1 \
@@ -142,19 +142,19 @@ jobs:
             -t ${ECR_REGISTRY}/${ECR_REPOSITORY}:latest \
             -f src/docker/Dockerfile \
             .
-          
+
           docker push ${IMAGE_URI}
           docker push ${ECR_REGISTRY}/${ECR_REPOSITORY}:latest
-          
+
           echo "image_uri=${IMAGE_URI}" >> $GITHUB_OUTPUT
 
       - name: Scan image for vulnerabilities
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: ${{ steps.build.outputs.image_uri }}
-          format: 'table'
-          severity: 'CRITICAL,HIGH'
-          exit-code: '0'
+          format: "table"
+          severity: "CRITICAL,HIGH"
+          exit-code: "0"
 
   # ============================================
   # Job 3a: Development 部署 (自動，不需審核)
@@ -206,7 +206,7 @@ jobs:
           DISTRIBUTION_ID=$(aws cloudfront list-distributions \
             --query "DistributionList.Items[?contains(Comment, 'project')].Id" \
             --output text | head -1)
-          
+
           if [[ -n "$DISTRIBUTION_ID" ]]; then
             aws cloudfront create-invalidation \
               --distribution-id $DISTRIBUTION_ID \
@@ -263,7 +263,7 @@ jobs:
         run: |
           echo "🧪 Running smoke tests on Staging..."
           sleep 30
-          
+
           for i in {1..5}; do
             HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" https://${{ env.DOMAIN_NAME }})
             if [[ "$HTTP_CODE" == "200" ]] || [[ "$HTTP_CODE" == "301" ]] || [[ "$HTTP_CODE" == "302" ]]; then
@@ -273,7 +273,7 @@ jobs:
             echo "Attempt $i: HTTP $HTTP_CODE, retrying..."
             sleep 10
           done
-          
+
           echo "❌ Staging smoke test failed"
           exit 1
 
@@ -288,7 +288,7 @@ jobs:
       needs.setup.outputs.should_deploy == 'true' && 
       needs.setup.outputs.is_production == 'true'
     environment:
-      name: production  # ← 這裡會觸發 Approval Gate
+      name: production # ← 這裡會觸發 Approval Gate
       url: https://${{ env.DOMAIN_NAME }}
     steps:
       - uses: actions/checkout@v4
@@ -327,7 +327,7 @@ jobs:
           DISTRIBUTION_ID=$(aws cloudfront list-distributions \
             --query "DistributionList.Items[?contains(Comment, 'project')].Id" \
             --output text | head -1)
-          
+
           if [[ -n "$DISTRIBUTION_ID" ]]; then
             aws cloudfront create-invalidation \
               --distribution-id $DISTRIBUTION_ID \
@@ -349,7 +349,7 @@ jobs:
         run: |
           echo "🏥 Running health checks..."
           sleep 30
-          
+
           # 基本健康檢查
           for i in {1..5}; do
             HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" https://${{ env.DOMAIN_NAME }})
@@ -364,7 +364,7 @@ jobs:
       - name: WAF Protection Test
         run: |
           echo "🛡️ Testing WAF protection..."
-          
+
           # SQL Injection test
           SQLI_CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://${{ env.DOMAIN_NAME }}/?id=1'%20OR%20'1'='1")
           if [[ "$SQLI_CODE" == "403" ]]; then
@@ -372,7 +372,7 @@ jobs:
           else
             echo "⚠️ WAF SQLi test returned HTTP $SQLI_CODE"
           fi
-          
+
           # XSS test
           XSS_CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://${{ env.DOMAIN_NAME }}/?q=%3Cscript%3Ealert(1)%3C/script%3E")
           if [[ "$XSS_CODE" == "403" ]]; then
@@ -415,12 +415,12 @@ jobs:
         run: |
           # 取得 SNS Topic ARN
           TOPIC_ARN=$(aws sns list-topics --query "Topics[?contains(TopicArn, 'project')].TopicArn" --output text | head -1)
-          
+
           if [[ -z "$TOPIC_ARN" ]]; then
             echo "⚠️ SNS Topic not found, skipping notification"
             exit 0
           fi
-          
+
           ENVIRONMENT="${{ needs.setup.outputs.environment }}"
           STATUS="${{ steps.status.outputs.status }}"
           EMOJI="${{ steps.status.outputs.emoji }}"
@@ -429,40 +429,41 @@ jobs:
           COMMIT_MSG=$(echo "${{ github.event.head_commit.message }}" | head -1)
           ACTOR="${{ github.actor }}"
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          
+
           SUBJECT="${EMOJI} [${ENVIRONMENT^^}] Deployment ${STATUS}"
-          
-          MESSAGE="${EMOJI} Deployment ${STATUS}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📋 Deployment Details
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Environment: ${ENVIRONMENT}
-Status: ${STATUS}
-Image Tag: ${IMAGE_TAG:-N/A}
+          MESSAGE=$(cat <<EOF
+          ${EMOJI} Deployment ${STATUS}
+          ------------------------------------------
+          Deployment Details
+          ------------------------------------------
+          Environment: ${ENVIRONMENT}
+          Status: ${STATUS}
+          Image Tag: ${IMAGE_TAG:-N/A}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📝 Commit Info
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SHA: ${COMMIT_SHA:0:7}
-Author: ${ACTOR}
-Message: ${COMMIT_MSG}
+          ------------------------------------------
+          Commit Info
+          ------------------------------------------
+          SHA: ${COMMIT_SHA:0:7}
+          Author: ${ACTOR}
+          Message: ${COMMIT_MSG}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔗 Links
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Website: https://${{ env.DOMAIN_NAME }}
-Pipeline: ${RUN_URL}
+          ------------------------------------------
+          Links
+          ------------------------------------------
+          Website: https://${{ env.DOMAIN_NAME }}
+          Pipeline: ${RUN_URL}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🕐 Time: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
-"
-          
+          ------------------------------------------
+          Time: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+          EOF
+          )
+
           aws sns publish \
             --topic-arn "$TOPIC_ARN" \
             --subject "$SUBJECT" \
             --message "$MESSAGE"
-          
+
           echo "📧 Email notification sent!"
 
       - name: Summary
