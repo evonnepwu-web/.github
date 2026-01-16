@@ -285,88 +285,94 @@ Pipeline: https://github.com/.../actions/runs/123456
 
 ### 步驟二：修改程式碼 (Code)
 
-1. 在 VS Code 開啟：`src/theme/style.css`
-2. 在檔案最後加入測試 CSS：
+1. 在 VS Code 開啟：`theme_source/cosmetics-shop/style.css`
+   _(注意：這是原始碼位置，CI/CD 會自動將其打包)_
+
+2. 在檔案最後找到或加入以下 CSS：
+
    ```css
    /* CI/CD Demo: 將標題改為紅色 */
-   .site-title a,
-   .site-title {
+   .wp-block-site-title a,
+   .wp-block-site-title {
      color: #ff0000 !important;
    }
    ```
-3. 儲存檔案
+
+   _(如果已經存在，請確保沒有被註解掉)_
+
+3. 儲存檔案。
 
 ### 步驟三：觸發 CI/CD (Push)
 
-```bash
-git add .
-git commit -m "DEMO: Update site title color to red"
-git push origin main
-```
+1. 開啟終端機，確保在專案目錄下 (`terraform-ecs-fargate-cicd-full`)
+2. 執行 Git 指令推送變更：
 
-**解說**：「我現在將修改推送到 GitHub，這會自動觸發 GitHub Actions Pipeline，完全不需要登入 AWS Console。」
+   ```bash
+   git add .
+   git commit -m "DEMO: Update site title color"
+   git push origin main
+   ```
 
-### 步驟四：監控流程 (Monitor)
+3.此時 GitHub Action 會自動開始運作。
 
-1. 切換到 GitHub Actions 頁面：
-   `https://github.com/evonnepwu-web/.github/actions`
+### 步驟四：驗證結果 (Verify)
 
-2. 展示 Pipeline 步驟：
-
-   **Development 環境流程：**
-   | 步驟 | 說明 | 時間 |
-   |:-----|:-----|:-----|
-   | **Setup** | 偵測變更、判斷環境 | ~10s |
-   | **Build & Push** | 打包 Docker Image 並推送到 ECR | ~2-3min |
-   | **Trivy Scan** | 掃描 Image 安全漏洞 | ~30s |
-   | **Deploy to Dev** | 更新 Task Definition 並部署 | ~3-5min |
-   | **Verify** | Health Check + WAF Test | ~1min |
-   | **Notify** | 發送 Email 通知 | ~10s |
-
-   **Production 環境流程 (額外)：**
-   | 步驟 | 說明 |
-   |:-----|:-----|
-   | **Deploy to Staging** | 先部署到 Staging 測試 |
-   | **Smoke Test** | Staging 環境自動測試 |
-   | ⏸️ **Approval Gate** | **等待人工審核** |
-   | **Deploy to Production** | 審核通過後部署到 Production |
-
-### 步驟五：驗證結果 (After)
-
-1. 等待 GitHub Actions 顯示 ✅ **Success**
-2. 回到瀏覽器，重新整理 `https://evoger.tw`
-3. **標題變紅色了！** 🎉
-
-**解說**：「部署成功，過程中：
-
-- ❌ 不需要手動 SSH 進伺服器
-- ❌ 不需要傳輸檔案
-- ❌ 不需要手動重啟服務
-- ✅ ECS 滾動更新，零停機時間」
-
-### CI/CD 流程圖
-
-```
-Developer                GitHub                    AWS
-   │                        │                       │
-   │  git push              │                       │
-   │───────────────────────>│                       │
-   │                        │                       │
-   │                        │  Trigger Workflow     │
-   │                        │──────────────────────>│
-   │                        │                       │
-   │                        │  1. Build Docker      │
-   │                        │  2. Push to ECR       │
-   │                        │  3. Update Task Def   │
-   │                        │  4. Deploy ECS        │
-   │                        │  5. Health Check      │
-   │                        │<──────────────────────│
-   │                        │                       │
-   │  ✅ Success            │                       │
-   │<───────────────────────│                       │
-```
+1. 前往 GitHub Repo 的 **Actions** 分頁。
+2. 觀察最新的 Workflow Run (標題為 "DEMO: ...")。
+3. 等待 **Build & Push** 和 **Deploy to Development** 變成綠色 ✅ (約 3-5 分鐘)。
+4. 重新整理您的網站 `https://evoger.tw`。
+5. **成功！** 標題應該變成紅色了！ 🔴
 
 ---
+
+## ↩️ Phase 2.5: 還原展示 (Rollback)
+
+**情境**：展示結束後，如何將網站恢復原狀。
+
+1. 修改 `theme_source/cosmetics-shop/style.css`，將剛剛的 CSS **註解掉**或**刪除**：
+
+   ```css
+   /* .wp-block-site-title a,
+   .wp-block-site-title {
+     color: #ff0000 !important;
+   } */
+   ```
+
+2. 執行 Git 推送：
+
+   ```bash
+   git add .
+   git commit -m "ROLLBACK: Revert site title color"
+   git push origin main
+   ```
+
+3. 等待 CI/CD 跑完 ✅。
+4. 網站標題將變回原來的顏色 (黑色)。 ⚫
+
+---
+
+## 🔧 常見問題與故障排除 (Troubleshooting)
+
+### Q1: GitHub Action 顯示 "Credentials could not be loaded"？
+
+**原因**：AWS 上的權限設定 (IAM Role) 還沒更新到最新的 GitHub Repo 名稱。
+**解法**：
+
+1. 在終端機執行 Terraform 更新指令：
+   ```bash
+   terraform apply -auto-approve
+   ```
+2. 等待看到 `Apply complete!`。
+3. 回到 GitHub Actions 點擊 **Re-run jobs**。
+
+### Q2: GitHub Action 顯示 "Build" 步驟被跳過 (Skipped)？
+
+**原因**：Git 認為 `src` 目錄沒有變更，所以 CI 判斷不需要重新打包 Image。
+**解法**：
+
+1. 修改 `src/docker/wp-config.php`，隨便加一行註解 (例如 `// Force rebuild`)。
+2. `git add .` -> `git commit` -> `git push`。
+3. 這樣就能強制觸發建置了。
 
 ## 🛡️ Phase 2.5: WAF 安全測試 Demo
 
