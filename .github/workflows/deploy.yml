@@ -432,8 +432,8 @@ jobs:
 
           SUBJECT="${EMOJI} [${ENVIRONMENT^^}] Deployment ${STATUS}"
 
-          MESSAGE=$(cat <<EOF
-          ${EMOJI} Deployment ${STATUS}
+          MESSAGE="${EMOJI} Deployment ${STATUS}
+
           ------------------------------------------
           Deployment Details
           ------------------------------------------
@@ -456,8 +456,7 @@ jobs:
 
           ------------------------------------------
           Time: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
-          EOF
-          )
+          "
 
           aws sns publish \
             --topic-arn "$TOPIC_ARN" \
