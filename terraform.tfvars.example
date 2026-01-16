@@ -1,0 +1,105 @@
+# ===========================================
+# Terraform Variables Example
+# 複製此檔案為 terraform.tfvars 並填入你的值
+# ===========================================
+
+# --- AWS 設定 ---
+aws_region  = "ap-northeast-1"
+aws_profile = "your-profile"
+
+# --- 專案設定 ---
+project_name = "project"
+project_tag  = "your-project-tag"
+
+# --- 環境設定 ---
+# 可選值: development, staging, production
+# 預設: development (省錢配置)
+# production 會啟用: 高併發 ECS、Multi-AZ RDS、Provisioned EFS、Target Tracking Scaling
+environment = "development"
+
+# --- 網路設定 ---
+vpc_cidr = "10.0.0.0/16"
+
+public_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
+public_subnet_azs   = ["ap-northeast-1a", "ap-northeast-1c"]
+
+app_subnet_cidrs = ["10.0.10.0/24", "10.0.11.0/24"]
+app_subnet_azs   = ["ap-northeast-1a", "ap-northeast-1c"]
+
+data_subnet_cidrs = ["10.0.20.0/24", "10.0.21.0/24"]
+data_subnet_azs   = ["ap-northeast-1a", "ap-northeast-1c"]
+
+# --- Secrets Manager ---
+secrets_prefix = "your-project"
+
+# --- RDS 設定 ---
+# 以下值會根據 environment 自動設定，除非你明確指定
+# rds_instance_class = "db.t3.micro"  # development 預設
+# rds_instance_class = "db.t3.small"  # production 預設
+# rds_multi_az       = false          # development 預設
+# rds_multi_az       = true           # production 預設
+
+rds_allocated_storage     = 20
+rds_max_allocated_storage = 100
+db_name                   = "wordpress"
+db_username               = "admin"
+
+# --- ECS 設定 ---
+ecr_repo_name = "your-project-wordpress-repo"
+
+# 以下值會根據 environment 自動設定，除非你明確指定
+# task_cpu           = 512   # development 預設
+# task_cpu           = 1024  # production 預設
+# task_memory        = 1024  # development 預設
+# task_memory        = 2048  # production 預設
+# task_desired_count = 1     # development 預設
+# task_desired_count = 2     # production 預設
+# task_min_count     = 1     # development 預設
+# task_min_count     = 2     # production 預設
+# task_max_count     = 3     # development 預設
+# task_max_count     = 10    # production 預設
+
+wp_port = 80
+db_port = 3306
+
+# --- CI/CD ---
+# Docker image tag，CI/CD 會傳入特定版本
+image_tag = "latest"
+
+# --- Domain 設定 ---
+domain_name     = "example.com"
+acm_domain_name = "*.example.com"
+wp_site_url     = "https://example.com"
+
+# --- 通知 ---
+alert_email = "your-email@example.com"
+
+# --- GitHub Actions OIDC (選用) ---
+# 啟用後會建立 IAM Role 讓 GitHub Actions 可以部署
+enable_github_oidc = false
+github_repo        = "your-org/your-repo"  # 格式: owner/repo
+
+# ===========================================
+# 環境特定覆蓋 (選用)
+# 如果你想覆蓋自動設定的值，取消註解並修改
+# ===========================================
+
+# --- 手動覆蓋 ECS 配置 ---
+# task_cpu           = 1024
+# task_memory        = 2048
+# task_desired_count = 2
+# task_min_count     = 2
+# task_max_count     = 10
+
+# --- 手動覆蓋 RDS 配置 ---
+# rds_instance_class               = "db.t3.small"
+# rds_multi_az                     = true
+# rds_performance_insights_enabled = true
+
+# --- 手動覆蓋 Auto Scaling 配置 ---
+# scaling_cpu_target   = 60
+# scaling_cooldown_in  = 300
+# scaling_cooldown_out = 60
+
+# --- 手動覆蓋資源保護 ---
+# force_destroy = false
