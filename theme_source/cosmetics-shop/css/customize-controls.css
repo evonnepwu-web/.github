@@ -1,0 +1,28 @@
+li#accordion-section-cosmetics_shop_go_pro  {
+	display: block !important;
+}
+#accordion-section-cosmetics_shop_go_pro h3.accordion-section-title{
+    background: #7B5948 !important;
+    color: #fff !important;
+    font-size: 13px;
+    padding: 15px 15px 15px 10px;
+}
+a.button.button-secondary.alignright {
+    color: #7B5948!important;
+    background: #FFF !important;
+    font-size: 14px;
+    margin: -5px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    font-size: 14px;
+}
+#accordion-section-cosmetics_shop_go_pro .accordion-section-title:after{
+  display: none;
+}
+.customize-pane-parent{
+  overflow-x: hidden !important;
+}
+.accordion-section-title button.accordion-trigger{
+  height: auto !important;
+}
+

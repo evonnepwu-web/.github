@@ -1,0 +1,1851 @@
+# Copyright (C) 2025 VWThemes
+# This file is distributed under the GPLv3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Cosmetics Shop 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/cosmetics-shop\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-12-23T11:21:30+05:30\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: cosmetics-shop\n"
+
+#. Theme Name of the theme
+#: style.css
+#: inc/core/activation-notice.php:79
+#: inc/core/activation-notice.php:83
+#: inc/core/theme-info.php:5
+msgid "Cosmetics Shop"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://www.vwthemes.com/products/cosmetics-shop"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+#: inc/core/theme-info.php:44
+msgid "The Cosmetics Shop theme is designed for beauty brands, skincare stores, makeup boutiques, cosmetic product retailers, beauty supply shops, organic skincare sellers, makeup brands, and personal care businesses that want a clean, conversion-focused online presence. With its stylish layout and mobile-responsive structure, this theme helps you create a stunning cosmetics store website that showcases beauty products, skincare items, makeup collections, and wellness products with clarity and sophistication. Ideal for makeup shops, skincare ecommerce stores, beauty product retailers, cosmetic marketplaces, and online beauty shops, it combines elegant design with practical functionality. The fully customizable homepage lets you highlight best-selling products, new arrivals, discount offers, and promotional banners to increase engagement and sales. The theme integrates seamlessly with the WooCommerce plugin, making it easy to manage products, handle secure payments, control inventory, and run a fully functional beauty and cosmetics online store. Built with speed, SEO-friendly structure, and user experience in mind, it ensures fast loading times and smooth navigation. You can personalize colors, fonts, sections, and layouts using the built-in Customizer. Whether you are launching a makeup online store, skincare shop, beauty and wellness storefront, or cosmetic product catalog, this theme offers the flexibility and professionalism you need, including sections for product categories, featured collections, testimonials, brand highlights, blogs, and beauty tips, all wrapped in clean code, Gutenberg compatibility, and a user-friendly interface for a successful cosmetics retail website.Live Demo:https://www.vwthemes.net/cosmetics-shop-pro/"
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "VWThemes"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://www.vwthemes.com/"
+msgstr ""
+
+#: functions.php:87
+msgid "https://www.vwthemes.com/products/cosmetics-shop-wordpress-theme"
+msgstr ""
+
+#: functions.php:88
+msgid "https://wordpress.org/support/theme/cosmetics-shop/"
+msgstr ""
+
+#: functions.php:89
+msgid "https://wordpress.org/support/theme/cosmetics-shop/reviews/"
+msgstr ""
+
+#: functions.php:90
+msgid "https://www.vwthemes.net/cosmetics-shop-pro/"
+msgstr ""
+
+#: functions.php:91
+msgid "https://preview.vwthemesdemo.com/docs/cosmetics-shop-pro/"
+msgstr ""
+
+#: functions.php:92
+msgid "https://preview.vwthemesdemo.com/docs/free-cosmetics-shop/"
+msgstr ""
+
+#: functions.php:93
+msgid "https://www.vwthemes.com/products/wp-theme-bundle"
+msgstr ""
+
+#: functions.php:94
+msgid "https://preview.vwthemesdemo.com/docs/theme-bundle/"
+msgstr ""
+
+#: inc/block-patterns.php:33
+msgid "Default header"
+msgstr ""
+
+#: inc/block-patterns.php:38
+msgid "Default footer"
+msgstr ""
+
+#: inc/block-patterns.php:43
+#: inc/block-patterns.php:131
+msgid "Slider"
+msgstr ""
+
+#: inc/block-patterns.php:47
+#: inc/block-patterns.php:132
+msgid "Product Section"
+msgstr ""
+
+#: inc/block-patterns.php:51
+#: inc/block-patterns.php:133
+msgid "About Us Section"
+msgstr ""
+
+#: inc/block-patterns.php:55
+#: inc/block-patterns.php:134
+msgid "Testimonial Section"
+msgstr ""
+
+#: inc/block-patterns.php:59
+#: inc/block-patterns.php:135
+msgid "News Section"
+msgstr ""
+
+#: inc/block-patterns.php:63
+#: inc/block-patterns.php:136
+msgid "FAQ Section"
+msgstr ""
+
+#: inc/block-patterns.php:67
+msgid "Primary Sidebar"
+msgstr ""
+
+#: inc/block-patterns.php:71
+msgid "404 content"
+msgstr ""
+
+#: inc/block-patterns.php:75
+msgid "Post Single Column"
+msgstr ""
+
+#: inc/block-patterns.php:80
+msgid "Post Two Column"
+msgstr ""
+
+#: inc/block-patterns.php:85
+msgid "Post Three Column"
+msgstr ""
+
+#: inc/block-patterns.php:90
+msgid "Post Four Column"
+msgstr ""
+
+#: inc/block-patterns.php:95
+msgid "Feature Post Column"
+msgstr ""
+
+#: inc/block-patterns.php:100
+msgid "Comment Section 1"
+msgstr ""
+
+#: inc/block-patterns.php:104
+msgid "Cover With Post Title"
+msgstr ""
+
+#: inc/block-patterns.php:108
+msgid "Cover With Search Title"
+msgstr ""
+
+#: inc/block-patterns.php:112
+msgid "Cover With Archive Title"
+msgstr ""
+
+#: inc/block-patterns.php:116
+msgid "Cover With Index Title"
+msgstr ""
+
+#: inc/block-patterns.php:120
+msgid "Theme Button"
+msgstr ""
+
+#: inc/block-patterns.php:126
+msgid "Footers"
+msgstr ""
+
+#: inc/block-patterns.php:127
+msgid "Headers"
+msgstr ""
+
+#: inc/block-patterns.php:128
+#: patterns/primary-sidebar.php:27
+msgid "Pages"
+msgstr ""
+
+#: inc/block-patterns.php:129
+msgid "Query"
+msgstr ""
+
+#: inc/block-patterns.php:130
+msgid "Sidebars"
+msgstr ""
+
+#: inc/block-patterns.php:137
+msgid "Comment Sections"
+msgstr ""
+
+#: inc/block-patterns.php:138
+msgid "Theme Button Sections"
+msgstr ""
+
+#: inc/core/activation-notice.php:21
+msgid "🎉 Welcome to VW Themes,"
+msgstr ""
+
+#: inc/core/activation-notice.php:22
+msgid "You are now using the Cosmetics Shop, a beautifully designed theme to kickstart your website."
+msgstr ""
+
+#: inc/core/activation-notice.php:23
+msgid "To help you get started quickly, use the options below:"
+msgstr ""
+
+#: inc/core/activation-notice.php:27
+msgid "GET STARTED"
+msgstr ""
+
+#: inc/core/activation-notice.php:61
+msgid "VIEW DEMO"
+msgstr ""
+
+#: inc/core/activation-notice.php:67
+msgid "UPGRADE TO PRO"
+msgstr ""
+
+#: inc/core/activation-notice.php:73
+msgid "BUNDLE OF 400+ THEMES"
+msgstr ""
+
+#: inc/core/theme-info.php:5
+#: patterns/footer-default.php:123
+msgid "Cosmetics Shop Theme"
+msgstr ""
+
+#: inc/core/theme-info.php:27
+msgid "Free Setup"
+msgstr ""
+
+#: inc/core/theme-info.php:28
+msgid "Get Premium"
+msgstr ""
+
+#: inc/core/theme-info.php:29
+msgid "Free VS Premium"
+msgstr ""
+
+#: inc/core/theme-info.php:30
+#: inc/core/theme-info.php:298
+msgid "WP Theme Bundle"
+msgstr ""
+
+#: inc/core/theme-info.php:42
+msgid "Lite Theme Information"
+msgstr ""
+
+#: inc/core/theme-info.php:47
+msgid "Edit Your Site"
+msgstr ""
+
+#: inc/core/theme-info.php:48
+msgid "Visit Your Site"
+msgstr ""
+
+#: inc/core/theme-info.php:52
+msgid "Having Trouble, Need Support?"
+msgstr ""
+
+#: inc/core/theme-info.php:53
+msgid "Our dedicated team is well prepared to help you out in case of queries and doubts regarding our theme."
+msgstr ""
+
+#: inc/core/theme-info.php:55
+msgid "Support Forum"
+msgstr ""
+
+#: inc/core/theme-info.php:59
+msgid "Reviews & Testimonials"
+msgstr ""
+
+#: inc/core/theme-info.php:60
+msgid "All the features and aspects of this WordPress Theme are phenomenal. I'd recommend this theme to all."
+msgstr ""
+
+#: inc/core/theme-info.php:62
+#: patterns/testimonial-section.php:16
+msgid "Reviews"
+msgstr ""
+
+#: inc/core/theme-info.php:66
+msgid "Theme Documentation"
+msgstr ""
+
+#: inc/core/theme-info.php:67
+msgid "If you need any assistance regarding setting up and configuring the Theme, our documentation is there."
+msgstr ""
+
+#: inc/core/theme-info.php:69
+msgid "Free Theme Documentation"
+msgstr ""
+
+#: inc/core/theme-info.php:80
+msgid "Premium Theme Information"
+msgstr ""
+
+#: inc/core/theme-info.php:82
+msgid "The Cosmetics Shop WordPress Theme is a beautifully designed, highly functional, and performance-driven template crafted specifically for beauty brands, cosmetic stores, skincare shops, and makeup product websites. Built with a clean layout and modern aesthetics, it helps you showcase your beauty products with elegance while ensuring smooth navigation and engaging user experiences. This theme offers responsive design, ensuring your website looks flawless on all devices, whether smartphones, tablets, or desktops. With strategically placed call-to-action sections, customizable homepage blocks, and support for popular page builders, you can create a professional-looking cosmetic website without any technical expertise. The Cosmetics Shop WordPress Theme integrates seamlessly with WooCommerce, enabling you to manage products, display product variations, and offer quick checkout experiences with ease. Optimized for SEO and speed, it boosts your store’s visibility while delivering fast loading times for better conversions. The Cosmetics WordPress Theme is perfect for beauty salons, organic cosmetic brands, online makeup stores, and personal beauty professionals who want to establish their presence with a stylish and high-performing website. Whether you are launching a new brand or upgrading an existing store, this theme gives you everything you need to create a stunning, user-friendly cosmetics website."
+msgstr ""
+
+#: inc/core/theme-info.php:84
+#: inc/core/theme-info.php:328
+msgid "Live Demo"
+msgstr ""
+
+#: inc/core/theme-info.php:85
+#: inc/core/theme-info.php:329
+msgid "Buy Premium"
+msgstr ""
+
+#: inc/core/theme-info.php:86
+#: inc/core/theme-info.php:312
+#: inc/core/theme-info.php:330
+msgid "Documentation"
+msgstr ""
+
+#: inc/core/theme-info.php:97
+msgid "Theme Features"
+msgstr ""
+
+#: inc/core/theme-info.php:103
+msgid "Features"
+msgstr ""
+
+#: inc/core/theme-info.php:104
+msgid "Free Themes"
+msgstr ""
+
+#: inc/core/theme-info.php:105
+msgid "Premium Themes"
+msgstr ""
+
+#: inc/core/theme-info.php:110
+msgid "Easy Setup"
+msgstr ""
+
+#: inc/core/theme-info.php:115
+msgid "Responsive Design"
+msgstr ""
+
+#: inc/core/theme-info.php:120
+msgid "SEO Friendly"
+msgstr ""
+
+#: inc/core/theme-info.php:125
+msgid "Banner Settings"
+msgstr ""
+
+#: inc/core/theme-info.php:130
+msgid "Template Pages"
+msgstr ""
+
+#: inc/core/theme-info.php:131
+#: inc/core/theme-info.php:136
+#: inc/core/theme-info.php:137
+#: inc/core/theme-info.php:147
+msgid "1"
+msgstr ""
+
+#: inc/core/theme-info.php:132
+msgid "14"
+msgstr ""
+
+#: inc/core/theme-info.php:135
+msgid "Home Page Template"
+msgstr ""
+
+#: inc/core/theme-info.php:140
+msgid "Theme sections"
+msgstr ""
+
+#: inc/core/theme-info.php:141
+msgid "2"
+msgstr ""
+
+#: inc/core/theme-info.php:142
+msgid "12"
+msgstr ""
+
+#: inc/core/theme-info.php:145
+msgid "Contact us Page Template"
+msgstr ""
+
+#: inc/core/theme-info.php:150
+msgid "Blog Templates & Layout"
+msgstr ""
+
+#: inc/core/theme-info.php:152
+msgid "3(Full width/Left/Right Sidebar)"
+msgstr ""
+
+#: inc/core/theme-info.php:155
+msgid "Section Reordering"
+msgstr ""
+
+#: inc/core/theme-info.php:160
+msgid "Demo Importer"
+msgstr ""
+
+#: inc/core/theme-info.php:165
+msgid "Full Documentation"
+msgstr ""
+
+#: inc/core/theme-info.php:170
+msgid "Latest WordPress Compatibility"
+msgstr ""
+
+#: inc/core/theme-info.php:175
+msgid "Support 3rd Party Plugins"
+msgstr ""
+
+#: inc/core/theme-info.php:180
+msgid "Secure and Optimized Code"
+msgstr ""
+
+#: inc/core/theme-info.php:185
+msgid "Exclusive Functionalities"
+msgstr ""
+
+#: inc/core/theme-info.php:190
+msgid "Section Enable / Disable"
+msgstr ""
+
+#: inc/core/theme-info.php:195
+msgid "Section Google Font Choices"
+msgstr ""
+
+#: inc/core/theme-info.php:200
+#: patterns/footer-default.php:52
+msgid "Gallery"
+msgstr ""
+
+#: inc/core/theme-info.php:205
+msgid "Simple & Mega Menu Option"
+msgstr ""
+
+#: inc/core/theme-info.php:210
+msgid "Support to add custom CSS / JS "
+msgstr ""
+
+#: inc/core/theme-info.php:215
+msgid "Shortcodes"
+msgstr ""
+
+#: inc/core/theme-info.php:220
+msgid "Custom Background, Colors, Header, Logo & Menu"
+msgstr ""
+
+#: inc/core/theme-info.php:225
+msgid "Premium Membership"
+msgstr ""
+
+#: inc/core/theme-info.php:230
+msgid "Budget Friendly Value"
+msgstr ""
+
+#: inc/core/theme-info.php:235
+msgid "Priority Error Fixing"
+msgstr ""
+
+#: inc/core/theme-info.php:240
+msgid "Custom Feature Addition"
+msgstr ""
+
+#: inc/core/theme-info.php:245
+msgid "All Access Theme Pass"
+msgstr ""
+
+#: inc/core/theme-info.php:250
+msgid "Seamless Customer Support"
+msgstr ""
+
+#: inc/core/theme-info.php:255
+msgid "WordPress 6.4 or later"
+msgstr ""
+
+#: inc/core/theme-info.php:260
+msgid "PHP 8.2 or 8.3"
+msgstr ""
+
+#: inc/core/theme-info.php:265
+msgid "MySQL 5.6 (or greater) | MariaDB 10.0 (or greater)"
+msgstr ""
+
+#: inc/core/theme-info.php:270
+msgid "Influence Registration"
+msgstr ""
+
+#: inc/core/theme-info.php:275
+msgid "Detailed Influencer Portfolio"
+msgstr ""
+
+#: inc/core/theme-info.php:280
+msgid "Premium Pricing Plan"
+msgstr ""
+
+#: inc/core/theme-info.php:287
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/core/theme-info.php:300
+msgid "Enhance your website effortlessly with our WP Theme Bundle. Get access to 400+ premium WordPress themes and 5+ powerful plugins, all designed to meet diverse business needs. Enjoy seamless integration with any plugins, ultimate customization flexibility, and regular updates to keep your site current and secure. Plus, benefit from our dedicated customer support, ensuring a smooth and professional web experience."
+msgstr ""
+
+#: inc/core/theme-info.php:302
+msgid "Features:"
+msgstr ""
+
+#: inc/core/theme-info.php:303
+msgid "400+ Premium Themes & 5+ Plugins."
+msgstr ""
+
+#: inc/core/theme-info.php:304
+msgid "Seamless Integration."
+msgstr ""
+
+#: inc/core/theme-info.php:305
+msgid "Customization Flexibility."
+msgstr ""
+
+#: inc/core/theme-info.php:306
+msgid "Regular Updates."
+msgstr ""
+
+#: inc/core/theme-info.php:307
+msgid "Dedicated Support."
+msgstr ""
+
+#: inc/core/theme-info.php:309
+msgid "Upgrade now and give your website the professional edge it deserves, all at an unbeatable price of $99!"
+msgstr ""
+
+#: inc/core/theme-info.php:311
+msgid "Get Bundle"
+msgstr ""
+
+#: inc/core/theme-info.php:324
+msgid "Welcome To Cosmetics Shop"
+msgstr ""
+
+#: inc/core/theme-info.php:324
+#: inc/tgm/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: inc/core/theme-info.php:325
+msgid "All Our Wordpress Themes Are Modern, Minimalist, 100% Responsive, Seo-Friendly,Feature-Rich, And Multipurpose That Best Suit Designers, Bloggers And Other Professionals Who Are Working In The Creative Fields."
+msgstr ""
+
+#: inc/core/theme-info.php:341
+msgid "WP THEME BUNDLE"
+msgstr ""
+
+#: inc/core/theme-info.php:342
+msgid "Get Access to 400+ Premium WordPress Themes At Just $99"
+msgstr ""
+
+#: inc/core/theme-info.php:344
+msgid "Get 10% OFF On Bundle"
+msgstr ""
+
+#: inc/core/theme-info.php:355
+msgid "GET PRO"
+msgstr ""
+
+#: inc/core/theme-info.php:356
+msgid "20% Off"
+msgstr ""
+
+#: inc/section-pro/customizer.php:73
+msgid "Cosmetics Shop Pro"
+msgstr ""
+
+#: inc/section-pro/customizer.php:74
+msgid "Upgrade Pro"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:330
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:332
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: inc/tgm/class-tgm-plugin-activation.php:334
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/tgm/class-tgm-plugin-activation.php:340
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/tgm/class-tgm-plugin-activation.php:346
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/tgm/class-tgm-plugin-activation.php:352
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/tgm/class-tgm-plugin-activation.php:358
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/tgm/class-tgm-plugin-activation.php:364
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:370
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:375
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:380
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:386
+#: inc/tgm/class-tgm-plugin-activation.php:827
+#: inc/tgm/class-tgm-plugin-activation.php:2533
+#: inc/tgm/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:387
+#: inc/tgm/class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:388
+#: inc/tgm/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:390
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:392
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: inc/tgm/class-tgm-plugin-activation.php:394
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:396
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:934
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:934
+#: inc/tgm/class-tgm-plugin-activation.php:937
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:937
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:1121
+#: inc/tgm/class-tgm-plugin-activation.php:2948
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: inc/tgm/class-tgm-plugin-activation.php:1982
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: inc/tgm/class-tgm-plugin-activation.php:2342
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: inc/tgm/class-tgm-plugin-activation.php:2388
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/tgm/class-tgm-plugin-activation.php:2392
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/tgm/class-tgm-plugin-activation.php:2396
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/tgm/class-tgm-plugin-activation.php:2400
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/tgm/class-tgm-plugin-activation.php:2603
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/tgm/class-tgm-plugin-activation.php:2608
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/tgm/class-tgm-plugin-activation.php:2614
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2717
+msgid "Install"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2726
+msgid "Activate"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/tgm/class-tgm-plugin-activation.php:3498
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: inc/tgm/class-tgm-plugin-activation.php:3501
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:3503
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3507
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:3509
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:3509
+#: inc/tgm/class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:3509
+#: inc/tgm/class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/tgm/class-tgm-plugin-activation.php:3512
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3515
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/tgm/class-tgm-plugin-activation.php:3517
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/tgm/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/tgm/class-tgm-plugin-activation.php:3520
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm/plugin-activation.php:62
+msgid "WooCommerce"
+msgstr ""
+
+#: inc/tgm/plugin-activation.php:67
+msgid "Ibtana - WordPress Website Builder"
+msgstr ""
+
+#: inc/tgm/plugin-activation.php:72
+msgid "Ibtana - Ecommerce Product Addons"
+msgstr ""
+
+#: patterns/about-us-section.php
+msgctxt "Pattern title"
+msgid "About Us Section"
+msgstr ""
+
+#: patterns/about-us-section.php:24
+msgid "about us"
+msgstr ""
+
+#: patterns/about-us-section.php:28
+msgid "Crafting Confidence Through Every Shade"
+msgstr ""
+
+#: patterns/about-us-section.php:32
+#: patterns/about-us-section.php:46
+#: patterns/about-us-section.php:60
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi elit, consequat pharetra elementum nec, eleifend non turpis."
+msgstr ""
+
+#: patterns/about-us-section.php:42
+msgid "highly rated &amp; esteemed"
+msgstr ""
+
+#: patterns/about-us-section.php:56
+msgid "full customer satisfaction"
+msgstr ""
+
+#: patterns/comment-section-1.php
+msgctxt "Pattern title"
+msgid "Comment Section 1"
+msgstr ""
+
+#: patterns/cover-with-archive-title.php
+msgctxt "Pattern title"
+msgid "Cover With Archive Title"
+msgstr ""
+
+#: patterns/cover-with-index-title.php
+msgctxt "Pattern title"
+msgid "Cover With Index Title"
+msgstr ""
+
+#: patterns/cover-with-index-title.php:11
+msgid "BLOG"
+msgstr ""
+
+#: patterns/cover-with-post-title.php
+msgctxt "Pattern title"
+msgid "Cover With Post Title"
+msgstr ""
+
+#: patterns/cover-with-product-archive-title.php
+msgctxt "Pattern title"
+msgid "Cover With Product Archive Title"
+msgstr ""
+
+#: patterns/cover-with-search-title.php
+msgctxt "Pattern title"
+msgid "Cover With Search Title"
+msgstr ""
+
+#: patterns/faq-section.php
+msgctxt "Pattern title"
+msgid "FAQ's Section"
+msgstr ""
+
+#: patterns/faq-section.php:16
+msgid "FAQ's"
+msgstr ""
+
+#: patterns/faq-section.php:20
+msgid "have any questions for us?"
+msgstr ""
+
+#: patterns/faq-section.php:32
+msgid "Are the cosmetics cruelty-free and vegan?"
+msgstr ""
+
+#: patterns/faq-section.php:33
+#: patterns/faq-section.php:39
+#: patterns/faq-section.php:45
+#: patterns/faq-section.php:51
+#: patterns/faq-section.php:59
+#: patterns/faq-section.php:65
+#: patterns/faq-section.php:71
+#: patterns/faq-section.php:77
+msgid "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since."
+msgstr ""
+
+#: patterns/faq-section.php:38
+msgid "How long does the makeup stay on?"
+msgstr ""
+
+#: patterns/faq-section.php:44
+msgid "Do you offer shade matching assistance?"
+msgstr ""
+
+#: patterns/faq-section.php:50
+msgid "Are your products safe for sensitive skin?"
+msgstr ""
+
+#: patterns/faq-section.php:58
+msgid "What is the shelf life of your cosmetics?"
+msgstr ""
+
+#: patterns/faq-section.php:64
+msgid "Do you ship internationally?"
+msgstr ""
+
+#: patterns/faq-section.php:70
+msgid "Can pregnant women use these products?"
+msgstr ""
+
+#: patterns/faq-section.php:76
+msgid "How should I store my skincare and makeup items?"
+msgstr ""
+
+#: patterns/feature-post-column.php
+msgctxt "Pattern title"
+msgid "Feature Post Column"
+msgstr ""
+
+#: patterns/feature-post-column.php:46
+msgid "Popular News"
+msgstr ""
+
+#: patterns/feature-post-column.php:101
+msgid ""
+"Life Is Either A Daring Adventure Or Nothing At\n"
+"\t\t\t\t\t\t\tAll"
+msgstr ""
+
+#: patterns/feature-post-column.php:151
+msgid "Recent News"
+msgstr ""
+
+#: patterns/footer-default.php
+msgctxt "Pattern title"
+msgid "Footer Default"
+msgstr ""
+
+#: patterns/footer-default.php:15
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique justo et justo fringilla mattis. Quisque ullamcorper ligula ac justo faucibus, at pellentesque nunc tincidunt. Proin rutrum viverra mauris, id finibus metus vestibulum in. Etiam vel arcu nisi."
+msgstr ""
+
+#: patterns/footer-default.php:31
+msgid "useful links"
+msgstr ""
+
+#: patterns/footer-default.php:36
+msgid "About"
+msgstr ""
+
+#: patterns/footer-default.php:40
+msgid "Team"
+msgstr ""
+
+#: patterns/footer-default.php:44
+msgid "Blog"
+msgstr ""
+
+#: patterns/footer-default.php:48
+#: patterns/shop-title-cover.php:11
+msgid "Shop"
+msgstr ""
+
+#: patterns/footer-default.php:59
+msgid "help & support"
+msgstr ""
+
+#: patterns/footer-default.php:64
+msgid "FAQ"
+msgstr ""
+
+#: patterns/footer-default.php:68
+msgid "Customer Service"
+msgstr ""
+
+#: patterns/footer-default.php:72
+msgid "Privacy Policy"
+msgstr ""
+
+#: patterns/footer-default.php:76
+msgid "Terms of Service"
+msgstr ""
+
+#: patterns/footer-default.php:80
+msgid "Contact Us"
+msgstr ""
+
+#: patterns/footer-default.php:87
+msgid "Need Help?"
+msgstr ""
+
+#: patterns/footer-default.php:96
+msgid "+123456789123"
+msgstr ""
+
+#: patterns/footer-default.php:101
+msgid "Monday To Saturday : 09.00AM - 08.00PM"
+msgstr ""
+
+#: patterns/footer-default.php:105
+msgid "Sunday Closed"
+msgstr ""
+
+#: patterns/footer-default.php:114
+msgid "xyz123@example.com"
+msgstr ""
+
+#: patterns/footer-default.php:123
+msgid "By VWThemes"
+msgstr ""
+
+#: patterns/header-default.php
+msgctxt "Pattern title"
+msgid "Header Default"
+msgstr ""
+
+#: patterns/header-default.php:11
+msgid "Limited Time Offer: Free Shipping on Orders Over $50!"
+msgstr ""
+
+#: patterns/hidden-404.php
+msgctxt "Pattern title"
+msgid "Hidden 404"
+msgstr ""
+
+#: patterns/hidden-404.php:13
+msgid "Page Not Found"
+msgstr ""
+
+#: patterns/hidden-404.php:17
+msgid "This page could not be found. Maybe try a search?"
+msgstr ""
+
+#: patterns/news-section.php
+msgctxt "Pattern title"
+msgid "News Section"
+msgstr ""
+
+#: patterns/news-section.php:16
+msgid "our blog"
+msgstr ""
+
+#: patterns/news-section.php:20
+msgid "our latest news & blogs"
+msgstr ""
+
+#: patterns/post-content-1.php
+msgctxt "Pattern title"
+msgid "Post Content 1"
+msgstr ""
+
+#: patterns/post-listing-four-column.php
+msgctxt "Pattern title"
+msgid "Post Listing Four Column"
+msgstr ""
+
+#: patterns/post-listing-single-column.php
+msgctxt "Pattern title"
+msgid "Post Listing Single Column"
+msgstr ""
+
+#: patterns/post-listing-three-column.php
+msgctxt "Pattern title"
+msgid "Post Listing Three Column"
+msgstr ""
+
+#: patterns/post-listing-two-column.php
+msgctxt "Pattern title"
+msgid "Post Listing Two Column"
+msgstr ""
+
+#: patterns/primary-sidebar.php
+msgctxt "Pattern title"
+msgid "Primary Sidebar"
+msgstr ""
+
+#: patterns/primary-sidebar.php:11
+msgid "Search"
+msgstr ""
+
+#: patterns/primary-sidebar.php:19
+msgid "Archive"
+msgstr ""
+
+#: patterns/primary-sidebar.php:35
+msgid "Tags"
+msgstr ""
+
+#: patterns/primary-sidebar.php:43
+msgid "Recent Posts"
+msgstr ""
+
+#: patterns/primary-sidebar.php:51
+msgid "Social Media"
+msgstr ""
+
+#: patterns/product-section.php
+msgctxt "Pattern title"
+msgid "Product Section"
+msgstr ""
+
+#: patterns/product-section.php:16
+#: patterns/product-section.php:50
+msgid "shop"
+msgstr ""
+
+#: patterns/product-section.php:20
+#: patterns/product-section.php:54
+msgid "our best selling product"
+msgstr ""
+
+#: patterns/product-section.php:34
+#: patterns/product-section.php:75
+#: patterns/product-section.php:95
+#: patterns/product-section.php:115
+#: patterns/product-section.php:135
+msgid "order now"
+msgstr ""
+
+#: patterns/product-section.php:66
+msgid "lumiskin glow serum"
+msgstr ""
+
+#: patterns/product-section.php:70
+#: patterns/product-section.php:90
+#: patterns/product-section.php:110
+#: patterns/product-section.php:130
+msgid "$31.00"
+msgstr ""
+
+#: patterns/product-section.php:86
+msgid "velvet touch foundation"
+msgstr ""
+
+#: patterns/product-section.php:106
+msgid "purebloom face cream"
+msgstr ""
+
+#: patterns/product-section.php:126
+msgid "radiance revive toner"
+msgstr ""
+
+#: patterns/product-sidebar.php
+msgctxt "Pattern title"
+msgid "Product Sidebar"
+msgstr ""
+
+#: patterns/product-sidebar.php:11
+msgid "Filter by price"
+msgstr ""
+
+#: patterns/product-sidebar.php:21
+msgid "Categories"
+msgstr ""
+
+#: patterns/product-sidebar.php:29
+msgid "Active filters"
+msgstr ""
+
+#: patterns/product-sidebar.php:39
+msgid "Filter by stock status"
+msgstr ""
+
+#: patterns/product-sidebar.php:49
+msgid "Filter by attribute"
+msgstr ""
+
+#: patterns/product-sidebar.php:59
+msgid "Filter by rating"
+msgstr ""
+
+#: patterns/shop-title-cover.php
+msgctxt "Pattern title"
+msgid "Shop Title Cover"
+msgstr ""
+
+#: patterns/slider.php
+msgctxt "Pattern title"
+msgid "Slider"
+msgstr ""
+
+#: patterns/slider.php:35
+#: patterns/slider.php:77
+#: patterns/slider.php:107
+#: patterns/slider.php:137
+msgid "shop now"
+msgstr ""
+
+#: patterns/slider.php:59
+#: patterns/slider.php:89
+#: patterns/slider.php:119
+msgid "product name here"
+msgstr ""
+
+#: patterns/slider.php:63
+#: patterns/slider.php:93
+#: patterns/slider.php:123
+msgid "$120.00"
+msgstr ""
+
+#: patterns/testimonial-section.php
+msgctxt "Pattern title"
+msgid "Testimonial Section"
+msgstr ""
+
+#: patterns/testimonial-section.php:20
+msgid "clients insights"
+msgstr ""
+
+#: patterns/testimonial-section.php:33
+#: patterns/testimonial-section.php:53
+#: patterns/testimonial-section.php:73
+#: patterns/testimonial-section.php:93
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis laoreet ante, ut rutrum felis tincidunt vel. Proin tellus magna, malesuada sit amet justo non, interdum congue tortor. Donec volutpat sollicitudin urna consequat luctus."
+msgstr ""
+
+#: patterns/testimonial-section.php:37
+msgid "ruth polina"
+msgstr ""
+
+#: patterns/testimonial-section.php:41
+msgid "sales associate"
+msgstr ""
+
+#: patterns/testimonial-section.php:57
+msgid "john wick"
+msgstr ""
+
+#: patterns/testimonial-section.php:61
+msgid "retail specialist"
+msgstr ""
+
+#: patterns/testimonial-section.php:77
+msgid "sophia james"
+msgstr ""
+
+#: patterns/testimonial-section.php:81
+msgid "studio executive"
+msgstr ""
+
+#: patterns/testimonial-section.php:97
+msgid "Liam Alexander"
+msgstr ""
+
+#: patterns/testimonial-section.php:101
+msgid "Business Analyst"
+msgstr ""
+
+#: patterns/theme-button.php
+msgctxt "Pattern title"
+msgid "Theme Button"
+msgstr ""
+
+#: patterns/theme-button.php:10
+msgid "READ MORE"
+msgstr ""
+
+#: styles/blue.json
+msgctxt "Style variation name"
+msgid "Blue"
+msgstr ""
+
+#: styles/blue.json
+#: styles/earth-green.json
+#: styles/golden.json
+#: styles/green.json
+#: styles/leaf-green.json
+#: styles/purple.json
+#: styles/red.json
+#: styles/teal-blue.json
+#: styles/violet.json
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: styles/blue.json
+#: styles/earth-green.json
+#: styles/golden.json
+#: styles/green.json
+#: styles/leaf-green.json
+#: styles/purple.json
+#: styles/red.json
+#: styles/teal-blue.json
+#: styles/violet.json
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: styles/blue.json
+#: styles/earth-green.json
+#: styles/golden.json
+#: styles/green.json
+#: styles/leaf-green.json
+#: styles/purple.json
+#: styles/red.json
+#: styles/teal-blue.json
+#: styles/violet.json
+#: theme.json
+msgctxt "Color name"
+msgid "Background1"
+msgstr ""
+
+#: styles/blue.json
+#: styles/earth-green.json
+#: styles/golden.json
+#: styles/green.json
+#: styles/leaf-green.json
+#: styles/purple.json
+#: styles/red.json
+#: styles/teal-blue.json
+#: styles/violet.json
+#: theme.json
+msgctxt "Color name"
+msgid "Background2"
+msgstr ""
+
+#: styles/blue.json
+#: styles/earth-green.json
+#: styles/golden.json
+#: styles/green.json
+#: styles/leaf-green.json
+#: styles/purple.json
+#: styles/red.json
+#: styles/teal-blue.json
+#: styles/violet.json
+#: theme.json
+msgctxt "Color name"
+msgid "Heading Color"
+msgstr ""
+
+#: styles/blue.json
+#: styles/earth-green.json
+#: styles/golden.json
+#: styles/green.json
+#: styles/leaf-green.json
+#: styles/purple.json
+#: styles/red.json
+#: styles/teal-blue.json
+#: styles/violet.json
+#: theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr ""
+
+#: styles/blue.json
+#: styles/earth-green.json
+#: styles/golden.json
+#: styles/green.json
+#: styles/leaf-green.json
+#: styles/purple.json
+#: styles/red.json
+#: styles/teal-blue.json
+#: styles/violet.json
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr ""
+
+#: styles/earth-green.json
+msgctxt "Style variation name"
+msgid "Earth Green"
+msgstr ""
+
+#: styles/golden.json
+msgctxt "Style variation name"
+msgid "Golden"
+msgstr ""
+
+#: styles/green.json
+msgctxt "Style variation name"
+msgid "Green"
+msgstr ""
+
+#: styles/leaf-green.json
+msgctxt "Style variation name"
+msgid "Leaf Green"
+msgstr ""
+
+#: styles/purple.json
+msgctxt "Style variation name"
+msgid "Purple"
+msgstr ""
+
+#: styles/red.json
+msgctxt "Style variation name"
+msgid "Red"
+msgstr ""
+
+#: styles/teal-blue.json
+msgctxt "Style variation name"
+msgid "Teal Blue"
+msgstr ""
+
+#: styles/violet.json
+msgctxt "Style variation name"
+msgid "Violet"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Blank"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (No Title / Feature Image)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Blog Page (Sidebar on Left)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Blog Page (Sidebar on Right)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single Page (Sidebar on Right)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single Page (Sidebar on Left)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single Post (Sidebar on Right)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single Post (Sidebar on Left)"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Foreground and background"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Foreground and secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Foreground and tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Primary and background"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Primary and secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Primary and tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Slider Background"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical secondary to tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical secondary to background"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical background to secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Secondary background to Secondary dark background"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Secondary background dark to Secondary  background"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal primary to foreground"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal secondary to background"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal secondary to background left"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal secondary to background right"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal background to secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal tertiary to background"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Diagonal background to tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "5"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "6"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "7"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Quicksand"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Poppins"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Rum Raisin"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Raleway"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Tiny"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Upper Heading"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Normal"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Content Heading"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra large (Recent Post Title)"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Huge (Display)"
+msgstr ""
