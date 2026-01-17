@@ -1,5 +1,4 @@
-﻿/*
-Theme Name: Cosmetics Shop
+﻿Theme Name: Cosmetics Shop
 Theme URI: https://wordpress.org/themes/cosmetics-shop/
 Author: aThemeArt
 Author URI: https://athemeart.com/
@@ -12,10 +11,11 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cosmetics-shop
 Tags: blog, custom-background, custom-logo, custom-menu, e-commerce, editor-style, featured-images, footer-widgets, full-width-template, one-column, right-sidebar, theme-options, threaded-comments, translation-ready, two-columns
-*/
 
-/* CI/CD Demo: 將標題改為紅色 */
+
+/* CI/CD Demo: 將標題改為紅色 
 .wp-block-site-title a,
 .wp-block-site-title {
   color: #ff0000 !important;
 }
+*/
