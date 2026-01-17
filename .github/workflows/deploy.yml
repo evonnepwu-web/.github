@@ -70,6 +70,7 @@ jobs:
           filters: |
             app:
               - 'src/**'
+              - 'theme_source/**'
             infra:
               - 'infrastructure/terraform/**'
 
