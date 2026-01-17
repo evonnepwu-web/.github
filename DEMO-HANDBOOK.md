@@ -143,9 +143,10 @@ terraform apply  # 套用變更
 ### 步驟
 
 1. 開啟 VS Code 終端機
-2. 切換到專案目錄：
+2. 確保在專案根目錄：
    ```bash
-   cd infrastructure/terraform
+   # 確認目前位置 (應該看到 main.tf, scripts/, src/ 等)
+   ls -F
    ```
 3. 執行一鍵部署腳本：
    ```bash
@@ -732,25 +733,53 @@ restore-from-backup.sh
 
 如果想展示 Auto Scaling：
 
-1. 使用壓測工具產生負載：
+1. 使用專案內建的 k6 腳本 (位於 `k6-load-test_v2/`)，不需安裝額外工具，只需確保 Docker Desktop 已啟動。
 
    ```bash
-   # 安裝 hey
-   brew install hey
+   # 1. 進入 k6 測試資料夾
+   cd k6-load-test_v2
 
-   # 發送 1000 個請求，50 並發
-   hey -n 1000 -c 50 https://evoger.tw
+   # 2. 執行 Auto Scaling 驗證測試
+   docker-compose run --rm autoscaling-test
    ```
 
-2. 觀察 Dashboard：
+   ### 🛠️ 進階用法：執行其他類型的測試
 
-   - CPU 使用率上升
-   - Task 數量增加 (1 → 2 → 3)
-   - Response Time 變化
+   您可以透過環境變數指定目標網址，並選擇不同的測試場景：
 
-3. 停止壓測後：
-   - CPU 使用率下降
-   - Task 數量縮減 (Cooldown 後)
+   ```bash
+   # 設定目標網址 (如果不是預設的 evoger.tw)
+   export WP_SITE_URL="https://evoger.tw"
+
+   # 1. 冒煙測試 (Smoke Test) - 快速檢查網站是否存活 (30秒)
+   docker-compose run --rm -e BASE_URL=${WP_SITE_URL} smoke-test
+
+   # 2. 負載測試 (Load Test) - 模擬一般流量 (10分鐘)
+   docker-compose run --rm -e BASE_URL=${WP_SITE_URL} load-test
+
+   # 3. 壓力測試 (Stress Test) - 測驗系統極限 (15分鐘)
+   docker-compose run --rm -e BASE_URL=${WP_SITE_URL} stress-test
+
+   # 4. Auto Scaling 驗證 - 逐步加壓觸發擴展 (20分鐘)
+   docker-compose run --rm -e BASE_URL=${WP_SITE_URL} autoscaling-test
+   ```
+
+   **腳本行為說明 (`scripts/autoscaling-test.js`)：**
+
+   - **階段 1 (暖身)**：2 分鐘維持 10 個使用者 (基準線)
+   - **階段 2 (衝刺)**：2 分鐘內爬升至 80 個使用者 (觸發 Scale Out)
+   - **階段 3 (維持)**：持續高負載 3 分鐘 (觀察 Task 增加)
+   - **階段 4 (冷卻)**：緩降至 20 個使用者 (觸發 Scale In)
+
+2. 觀察 CloudWatch Dashboard：
+
+   - **Running Task Count**：應該會從 1 慢慢增加到 3 (或更多)。
+   - **CPU Utilization**：會先衝高，隨著新 Task 加入而平均下降。
+   - **Response Time**：在擴展期間可能會短暫升高。
+
+3. 測試結束後：
+   - 腳本會自動產生測試報告 `results/autoscaling-test-latest.json`。
+   - 幾分鐘後，Task 數量會因冷卻機制而自動縮減。
 
 ---
 
@@ -819,34 +848,36 @@ project/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml              # CI/CD Pipeline
-├── infrastructure/
-│   └── terraform/
-│       ├── main.tf                 # Provider 設定
-│       ├── variables.tf            # 變數定義
-│       ├── locals.tf               # 環境預設值
-│       ├── terraform.tfvars        # 實際配置值
-│       ├── network.tf              # VPC/Subnet/SG
-│       ├── iam_acm.tf              # IAM + ACM
-│       ├── database.tf             # RDS + Secrets
-│       ├── storage.tf              # EFS + S3
-│       ├── compute.tf              # ECS + ALB + ECR
-│       ├── cdn_security.tf         # CloudFront + WAF
-│       ├── dns.tf                  # Route 53
-│       ├── monitoring.tf           # Auto Scaling + Alarms
-│       ├── dashboard.tf            # CloudWatch Dashboard
-│       ├── cicd.tf                 # GitHub OIDC
-│       ├── outputs.tf              # Outputs
-│       └── scripts/
-│           ├── deploy-everything.sh      # 一鍵部署
-│           ├── nuke-everything.sh        # 一鍵刪除 (含備份)
-│           ├── cleanup.sh                # 清理 (保留資料)
-│           ├── backup-before-cleanup.sh  # 備份腳本
-│           ├── restore-from-backup.sh    # 還原腳本
-│           ├── redeploy.sh               # 重新部署
-│           └── manual-deploy-image.sh    # 手動建置
-└── src/
-    └── docker/
-        └── Dockerfile              # WordPress Image
+├── scripts/
+│   ├── deploy-everything.sh      # 一鍵部署
+│   ├── nuke-everything.sh        # 一鍵刪除 (含備份)
+│   ├── cleanup.sh                # 清理 (保留資料)
+│   ├── backup-before-cleanup.sh  # 備份腳本
+│   ├── restore-from-backup.sh    # 還原腳本
+│   ├── redeploy.sh               # 重新部署
+│   └── manual-deploy-image.sh    # 手動建置
+├── src/
+│   └── docker/
+│       ├── Dockerfile              # WordPress Image
+│       └── wp-config.php           # WordPress 設定 (含 CI Trigger)
+├── theme_source/
+│   └── cosmetics-shop/             # WordPress 佈景主題原始碼
+│       └── style.css               # Demo 修改目標
+├── main.tf                         # Provider 設定
+├── variables.tf                    # 變數定義
+├── locals.tf                       # 環境預設值
+├── terraform.tfvars                # 實際配置值
+├── network.tf                      # VPC/Subnet/SG
+├── iam_acm.tf                      # IAM + ACM
+├── database.tf                     # RDS + Secrets
+├── storage.tf                      # EFS + S3
+├── compute.tf                      # ECS + ALB + ECR
+├── cdn_security.tf                 # CloudFront + WAF
+├── dns.tf                          # Route 53
+├── monitoring.tf                   # Auto Scaling + Alarms
+├── dashboard.tf                    # CloudWatch Dashboard
+├── cicd.tf                         # GitHub OIDC
+└── outputs.tf                      # Outputs
 ```
 
 ---
